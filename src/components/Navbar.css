@@ -1,0 +1,83 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+  width: 100%;
+  position: fixed; /* Fix the Navbar at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Logo Styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 40px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-link {
+  color: #000000; /* Black text color */
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #3498db; /* Blue color on hover */
+}
+
+/* Profile Dropdown */
+.navbar-profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-avatar {
+  border: none;
+  background-color: transparent;
+}
+
+.profile-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .navbar-logo {
+    font-size: 1.6em;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .navbar-profile {
+    margin-top: 20px;
+  }
+}
