@@ -10,6 +10,10 @@ function Log({ url, date, onClick }) {
     onClick?.(); // Call the onClick prop if provided
   };
 
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <div className="log" onClick={handleClick}>
       {/* Video player */}
@@ -17,10 +21,15 @@ function Log({ url, date, onClick }) {
         ref={videoRef}
         url={url}
         playing={isPlaying}
-        controls={true}
+        controls={false} // Disable default controls
         width="100%"
         height="auto"
       />
+
+      {/* Custom play/pause button */}
+      <button onClick={togglePlayPause} className="play-pause-btn">
+        {isPlaying ? "Pause" : "Play"}
+      </button>
 
       {/* Video details */}
       <div className="details">
