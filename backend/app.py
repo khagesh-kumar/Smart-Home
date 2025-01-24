@@ -36,7 +36,7 @@ os.makedirs(image_dir, exist_ok=True)
 os.makedirs(video_dir, exist_ok=True)
 
 # Twilio Configuration
-twilio_sid = 'AC547a3c88e044e0343266e53a11f48c4b'
+twilio_sid = ''
 twilio_auth_token = '52278c0d47274ce221f877db1145a8e3'
 twilio_phone_number = '+12315387903'
 user_phone_number = '+917032348501'
